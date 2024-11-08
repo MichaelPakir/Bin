@@ -1,6 +1,9 @@
+import { navBarList } from "@/constants";
 import Container from "./Container";
 import Logo from "./Logo";
 import SearchInput from "./SearchInput";
+import Link from "next/link";
+import { HiMenuAlt2 } from "react-icons/hi";
 
 const Header = () => {
   return (
@@ -8,7 +11,20 @@ const Header = () => {
       <Container className="h-full flex items-center justify-between gap-5 lg:gap-10">
         <Logo />
         <SearchInput />
-        <div>navBarList</div>
+        <div>
+          {navBarList?.map((item) => (
+            <Link key={item?.title} href={item?.link} className="navBarItem">
+              {item?.title}
+            </Link>
+          ))}
+          <Link href={"/signin"} className="navBarItem">
+            Signin
+          </Link>
+          <Link href={"/studio"} className="navBarItem">
+            Studio
+          </Link>
+        </div>
+        <HiMenuAlt2 className="inline-flex md:hidden cursor-pointer text-2xl hover:text-darkOrange hoverEffect" />
       </Container>
     </header>
   );
