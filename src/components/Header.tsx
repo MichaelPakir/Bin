@@ -11,7 +11,7 @@ const Header = () => {
       <Container className="h-full flex items-center justify-between gap-5 lg:gap-10">
         <Logo />
         <SearchInput />
-        <div>
+        <div className="hidden md:inline-flex items-center gap-7">
           {navBarList?.map((item) => (
             <Link key={item?.title} href={item?.link} className="navBarItem">
               {item?.title}
