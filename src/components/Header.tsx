@@ -18,7 +18,7 @@ const Header = () => {
             </Link>
           ))}
           <Link href={"/signin"} className="navBarItem">
-            Signin
+            Sign in
           </Link>
           <Link href={"/studio"} className="navBarItem">
             Studio
