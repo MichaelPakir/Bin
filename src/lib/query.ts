@@ -1,4 +1,4 @@
-import { groq } from "sanity";
+import { groq } from "next-sanity";
 
 const bannerQuery = groq`*[_type == 'banner']{
   ...

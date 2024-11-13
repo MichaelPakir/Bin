@@ -15,7 +15,7 @@ const config: Config = {
         accent: "#000000",
         accentWhite: "#FFFFFF",
         lightRed: "#EF3636",
-        lightGreen: "41CE09",
+        lightGreen: "#41CE09",
         bgLight: "#F5F5F5",
 
       },

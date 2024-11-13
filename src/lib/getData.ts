@@ -1,4 +1,4 @@
-import { client } from "@sanity/client";
+import { client } from '@/sanity/lib/client';
 import { bannerQuery, productQuery } from "./query";
 
 export const revalidate = 0;
