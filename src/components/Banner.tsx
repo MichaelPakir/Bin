@@ -5,6 +5,8 @@ import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import Button from "./Button";
 import { BannerData } from "../../type";
+import Link from "next/link";
+import FormattedPrice from "./FormattedPrice";
 
 const Banner = async () => {
   const banners = await getBannersData();
@@ -51,6 +53,19 @@ const Banner = async () => {
                 <p className="text-2xl font-semibold">{item?.title}</p>
                 <p className="text-3xl font-bold">{item?.subtitle}</p>
               </div>
+              <p className="mt-3 font-medium text-black/60">
+                From{" "}
+                <FormattedPrice
+                  amount={item?.price}
+                  className="text-lightRed font-bold"
+                />
+              </p>
+              <Link
+                href={"/shop"}
+                className="mt-5 font-bold underline underline-offset-2 decoration-[1px] hover:text-lightRed hoverEffect"
+              >
+                Buy Now!
+              </Link>
             </div>
             <Image
               src={urlFor(item?.image).url()}
