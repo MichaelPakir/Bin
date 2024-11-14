@@ -1,0 +1,9 @@
+// Add this to sanity.config.ts to reveal the studio header at sanity.
+studio: {
+    components: {
+      navbar: StudioHeader,
+    },
+  },
+
+// Add this to sanity schema types - types. To reveal sanity configs.
+types: [banner, products, category ],

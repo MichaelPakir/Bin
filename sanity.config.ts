@@ -29,6 +29,6 @@ export default defineConfig({
   studio: {
     components: {
       navbar: StudioHeader,
-    }
-  }
-})
+    },
+  },
+});
