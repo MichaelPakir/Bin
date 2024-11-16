@@ -36,8 +36,8 @@ type Category = {
 }
 
 export interface ProductData {
-    titles: string;
-    Image: ImageAsset;
+    title: string;
+    image: ImageAsset;
     quantity: number;
     price: number;
     category: Category[];
