@@ -52,3 +52,16 @@ export interface ProductData {
     position: string;
     rowprice: number;
 }
+
+interface UserInfo {
+    id: string;
+    name: string;
+    email: string;
+}
+export interface StoreState{
+    shoppers: {
+        cart: ProductData[];
+        wishlist: ProductData[];
+        userInfo: UserInfo | null;
+    }
+}

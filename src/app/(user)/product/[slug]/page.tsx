@@ -7,7 +7,7 @@ import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
 import FormattedPrice from "@/components/FormattedPrice";
 import { MdStar } from "react-icons/md";
-import { TbStarHalfFilled } from "react-icons/tb";
+import AddToCartButton from "@/components/AddToCartButton";
 
 const SingleProductPage = async ({ params }: Props) => {
   const { slug } = await Promise.resolve(params);
@@ -60,12 +60,30 @@ const SingleProductPage = async ({ params }: Props) => {
                   return (
                     <MdStar
                       key={index}
-                      className={`${filled ? "text-[#fa8900]" : halfFilled ? "text-[#f7ca00]" : "text-lightText"}`}
+                      className={`${
+                        filled
+                          ? "text-[#fa8900]"
+                          : halfFilled
+                            ? "text-[#f7ca00]"
+                            : "text-lightText"
+                      }`}
                     />
                   );
                 })}
               </div>
+              <p className="text-sm font-semibold text-accent/60 tracking-wide">{`(5 customer reviews)`}</p>
             </div>
+            <p className="text-sm tracking-wide text-gray-600">
+              {product?.description}
+            </p>
+            <p className="text-sm text-gray-500">
+              Be the first to leave a review.
+            </p>
+            <AddToCartButton item={product} className="rounded-md py-3" />
+            <p className="font-normal text-sm">
+              <span className="text-base font-medium">Categories:</span>
+              Spring collection, StreetWear, Women Tags: featured SKU: N/A
+            </p>
           </div>
         </div>
       </div>
