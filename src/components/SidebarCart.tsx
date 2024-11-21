@@ -6,8 +6,8 @@ import { useSelector } from "react-redux";
 import { StoreState } from "../../type";
 
 const SidebarCart = () => {
-  const storeData = useSelector((state: StoreState) => state?.shoppers?.cart);
-  console.log(storeData);
+  const { cart } = useSelector((state: StoreState) => state?.shoppers);
+  console.log(cart);
   return (
     <Link
       href={"/cart"}
@@ -19,7 +19,7 @@ const SidebarCart = () => {
       </div>
       <p className="text-xs font-semibold">Buy Now</p>
       <p className="absolute top-1 right-2 bg-darkOrange text-white text-xs w-4 h-4 rounded-full flex items-center justify-center font-semibold">
-        0
+        {cart.length}
       </p>
     </Link>
   );

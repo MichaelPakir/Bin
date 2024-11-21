@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getProductsData } from "@/lib/getData";
+// import { getProductsData } from "@/lib/getData";
 import { ProductData } from "../../type";
 
 interface UserInfo {
@@ -53,7 +53,7 @@ export const shoppersSlice=createSlice({
             }
         },
         removeFromCart: (state, action)=> {
-            state.cart = state.cart.filter((item) => item._id!== action.payload);
+            state.cart = state.cart.filter((item) => item. _id!== action.payload);
         },
         resetCart: (state) => {
             state.cart = [];

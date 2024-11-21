@@ -39,7 +39,7 @@ const ProductCard = ({ item }: { item: ProductData }) => {
           {item?.brand}
         </p>
         <h2 className="text-base font-semibold text-accent line-clamp-1">
-          {item?.titles}
+          {item?.title}
         </h2>
         <p className="text-center text-sm line-clamp-2">{item?.description}</p>
         <div>
@@ -53,7 +53,7 @@ const ProductCard = ({ item }: { item: ProductData }) => {
           />
         </div>
       </div>
-      <AddToCartButton />
+      <AddToCartButton item={item} className="rounded-md py-3" />
     </div>
   );
 };
